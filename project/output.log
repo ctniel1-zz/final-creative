@@ -1,0 +1,5 @@
+nohup: ignoring input
+before / Route
+/login Route
+[0mGET /login [36m304 [0m11.333 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m2.427 ms - -[0m
