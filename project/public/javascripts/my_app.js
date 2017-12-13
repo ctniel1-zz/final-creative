@@ -20,7 +20,7 @@ angular.module('myApp', []).
         if (localHighScore > $scope.user.high_score) {
           $http.post('/user/score', {high_score: localHighScore})
             .then(function(response) {
-              console.log(response);
+              $scope.user = response.data;
             });    
         }
       }
