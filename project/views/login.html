@@ -1,28 +1,36 @@
 
 <!doctype html>
 <html>
-    
+
 <head>
-    <title>User Login and Sessions</title>
+    <title>Snake Login</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
 </head>
-        
-<body>  
-    <div class="form-container">
-        <p class="form-header">Login</p>
-        <form method="POST" action="/login">
-            <label>Username:</label>
-            <input type="text" id="username" name="username"><br>
-            <label>Password:</label>
-            <input type="password" id="password" name="password"><br>
-            <input type="submit" id="login" value="Login">
-        </form>
-    </div>
-    <a id="signUpLink" href="/signup">Sign Up</a>
-    <hr>
-    <span id="loginMsg">
-    <%= msg %>
-    </span>
+
+<body>
+  <div class="jumbotron">
+    <h1>Login To Play Snake!</h1>
+  </div>
+
+  <img src="https://media.giphy.com/media/8D0yR4ylkAC1G/giphy.gif">
+
+  <div class="form-container">
+      <p class="form-header">Login</p>
+      <form method="POST" action="/login">
+          <label>Username:</label>
+          <input type="text" id="username" name="username"><br>
+          <label>Password:</label>
+          <input type="password" id="password" name="password"><br>
+          <input type="submit" class="btn btn-primary" id="login" value="Login">
+      </form>
+  </div>
+  <a id="signUpLink" href="/signup">Sign Up</a>
+  <hr>
+  <span id="loginMsg">
+  <%= msg %>
+  </span>
 </body>
-        
+
 </html>
