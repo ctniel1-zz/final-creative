@@ -10,7 +10,7 @@ angular.module('myApp', []).
           console.log(data);
           $scope.user = data;
           $scope.error = "";
-          $scope.highScore = data.high_score;
+          $scope.highScore = user.high_score;
     })
     .error(function(data, status, headers, config) {
       $scope.user = {};
