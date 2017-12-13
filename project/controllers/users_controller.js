@@ -84,6 +84,9 @@ exports.updateUser = function(req, res){
 exports.updateScore = function(req, res){
   User.findOne({ _id: req.session.user })
   .exec(function(err, user) {
+    console.log('hi')
+    console.log('req.body', req.body);
+    console.log('user', user);
      user.set('high_score', req.body.high_score);
 
   })
