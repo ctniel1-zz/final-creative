@@ -75,7 +75,7 @@ exports.updateUser = function(req, res){
         res.sessor.error = err;
       } else {
         req.session.msg = 'User Updated.';
-        // req.session.high_score = req.body.high_score;
+        //req.session.high_score = req.body.high_score;
       }
       res.redirect('/user');
     });

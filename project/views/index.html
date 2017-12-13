@@ -12,11 +12,11 @@
         <h2 id="welcomeText">Welcome. You are Logged In as
             <%= username %>
         </h2>
-        <a id="logoutLink" href="/logout">logout</a>
+        <a id="logoutLink" ng-click="logout()">logout</a>
         <a id="editLink" href="/user">Edit User</a>
         <p>Show off your snake skills!</p>
         <a href="/snake"><button>Play</button></a>
-        <p ng-cloak>Your current high score is: {{user.high_score}}</p>
+        <p id="high-score" ng-cloak>Your current high score is: {{user.high_score}}</p>
     </div>
     <hr>
     <span id="indexMsg">

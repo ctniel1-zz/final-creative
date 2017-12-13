@@ -5,9 +5,30 @@ angular.module('myApp', []).
       .success(function(data, status, headers, config) {
         $scope.user = data;
         $scope.error = "";
+        updateHS();      
       })
       .error(function(data, status, headers, config) {
         $scope.user = {};
         $scope.error = data;
       });
+
+      $scope.updateHS = updateHS;
+
+      function updateHS(highScore)
+      {
+        var localHighScore = localStorage.getItem('jsSnakeHighScore');
+        if (localHighScore > $scope.user.highScore) {
+          $http.post('/users/score', {high_score: localHighScore});    
+        }
+      }
+
+      $scope.logout = logout;
+
+      function logout()
+      {
+        localStorage.clear();
+        window.location.href="/logout";
+      }
+
+
   }]);
