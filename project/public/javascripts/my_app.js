@@ -17,7 +17,7 @@ angular.module('myApp', []).
       function updateHS(highScore)
       {
         var localHighScore = localStorage.getItem('jsSnakeHighScore');
-        if (localHighScore > $scope.user.highScore) {
+        if (localHighScore > $scope.user.high_score) {
           $http.post('/users/score', {high_score: localHighScore});    
         }
       }
