@@ -41,7 +41,7 @@ exports.login = function(req, res){
         req.session.user = user.id;
         req.session.username = user.username;
         req.session.msg = 'Authenticated as ' + user.username;
-        req.session.high_score = localStorage.jsSnakeHighScore;
+        req.session.high_score = user.high_score;
         res.redirect('/');
       });
     }else{
@@ -61,6 +61,7 @@ exports.getUserProfile = function(req, res) {
     if (!user){
       res.json(404, {err: 'User Not Found.'});
     } else {
+      console.log(user);
       res.json(user);
     }
   });
